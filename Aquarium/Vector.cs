@@ -12,7 +12,14 @@ namespace Aquarium
             X = x;
             Y = y;
         }
-        
+        public void Rotate(double angle)
+        {
+            double cos = Math.Cos(angle);
+            double sin = Math.Sin(angle);
+            double nextX = X * cos - Y * sin;
+            double nextY = X * sin + Y * cos;
+            X = nextX; Y = nextY;
+        }
         public double X { get; set; }
 
         public double Y { get; set; }

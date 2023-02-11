@@ -10,11 +10,12 @@ namespace Aquarium
         public int X { get; set; }
         public int Y { get; set; }
         public Point Location
-        { 
+        {
             get => new Point(X, Y);
-            set 
-            { X = value.X;
-              Y = value.Y;
+            set
+            {
+                X = value.X;
+                Y = value.Y;
             }
         }
         public Size Size { get; set; } = new Size();
@@ -28,6 +29,16 @@ namespace Aquarium
             Y = location.Y;
             Size = size;
             Image = image;
+        }
+
+        internal bool IsInto(Point point)
+        {
+            return point.X >= X && point.X < X + Width && point.Y >= Y && point.Y <= Height;
+        }
+
+        internal void Draw(Graphics graphics)
+        {
+            graphics.DrawImage(Image, Location);
         }
     }
 }

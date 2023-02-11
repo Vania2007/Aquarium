@@ -8,10 +8,8 @@ namespace Aquarium
 {
     class Carp : Fish
     {
-        public Carp(Point location, Size size, Image image) : base(location, size, image)
+        public Carp(Point location, Size size) : base(location, size, Resources.Karp)
         {
-            image = Resources.Karp;
         }
-        List<Carp> carps = new List<Carp>();
     }
 }

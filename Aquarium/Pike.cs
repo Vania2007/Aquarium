@@ -8,11 +8,10 @@ namespace Aquarium
 {
     public class Pike : Fish
     {
-        public Pike(Point location, Size size, Image image) : base(location, size, image)
+        public Pike(Point location, Size size) : base(location, size, Resources.Pike)
         {
-            image = Resources.Pike;
+
         }
-        List<Pike> pikes = new List<Pike>();
-       
+
     }
 }
